@@ -14,5 +14,5 @@ class Table(models.Model):
         return self.title
 
     class Meta():
-        verbose_name = 'Таблица'
-        verbose_name_plural = 'Таблицы'
+        verbose_name = 'Строка(у)'
+        verbose_name_plural = 'Строки'
