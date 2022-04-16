@@ -1,8 +1,7 @@
-from django.contrib import admin
-from django.urls import path
 from .views import *
-
-urlpatterns = [
-    path('', HomePageView.as_view(), name='home'),
-    # path('', index, name='home')
-]
+from rest_framework import routers
+# Создаем router и регистрируем наш ViewSet
+router = routers.DefaultRouter()
+router.register(r'rows', TableViewSet)
+# URLs настраиваются автоматически роутером
+urlpatterns = router.urls
